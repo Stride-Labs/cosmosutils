@@ -16,8 +16,13 @@ import (
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
-	ibctransfertypes "github.com/cosmos/ibc-go/v2/modules/apps/transfer/types"
-	ibctypes "github.com/cosmos/ibc-go/v2/modules/core/types"
+
+	// icacontrollertypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/controller/types"
+	// icahosttypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/host/types"
+	stakeibcmoduletypes "github.com/Stride-Labs/stride/x/stakeibc/types"
+	icatypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/types"
+	ibctransfertypes "github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
+	ibctypes "github.com/cosmos/ibc-go/v3/modules/core/types"
 	nfttypes "github.com/crypto-org-chain/chain-main/v3/x/nft/types"
 )
 
@@ -40,4 +45,8 @@ func RegisterDefaultInterfaces(interfaceRegistry types.InterfaceRegistry) {
 	nfttypes.RegisterInterfaces(interfaceRegistry)
 	authztypes.RegisterInterfaces(interfaceRegistry)
 	feegranttypes.RegisterInterfaces(interfaceRegistry)
+	// icacontrollertypes.RegisterInterfaces(interfaceRegistry)
+	// icahosttypes.RegisterInterfaces(interfaceRegistry)
+	icatypes.RegisterInterfaces(interfaceRegistry)
+	stakeibcmoduletypes.RegisterInterfaces(interfaceRegistry)
 }
