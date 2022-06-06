@@ -19,6 +19,7 @@ import (
 
 	// icacontrollertypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/controller/types"
 	// icahosttypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/host/types"
+	interchainquerytypes "github.com/Stride-Labs/stride/x/interchainquery/types"
 	stakeibcmoduletypes "github.com/Stride-Labs/stride/x/stakeibc/types"
 	icatypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
@@ -49,4 +50,5 @@ func RegisterDefaultInterfaces(interfaceRegistry types.InterfaceRegistry) {
 	// icahosttypes.RegisterInterfaces(interfaceRegistry)
 	icatypes.RegisterInterfaces(interfaceRegistry)
 	stakeibcmoduletypes.RegisterInterfaces(interfaceRegistry)
+	interchainquerytypes.RegisterInterfaces(interfaceRegistry)
 }
